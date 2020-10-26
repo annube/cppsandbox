@@ -5,12 +5,12 @@ import QtQuick.Controls 1.6
 Item {
     width: 400
     height: 400
-    property alias stackLayout: stackLayout
 
     GridLayout {
         id: gridLayout
         columns: 4
         anchors.fill: parent
+        anchors.margins: 5
 
         TextField {
             id: textField
@@ -187,16 +187,6 @@ Item {
             text: qsTr("=")
             Layout.fillWidth: true
             Layout.fillHeight: true
-        }
-
-        SpinBox {
-            id: spinBox
-        }
-
-        StackLayout {
-            id: stackLayout
-            width: 100
-            height: 100
         }
     }
 }
