@@ -1,3 +1,9 @@
+# Emacs backup files
+*~
+
+# QtCreator cmake additional project configuration
+CMakeLists.txt.user
+
 # Prerequisites
 *.d
 
