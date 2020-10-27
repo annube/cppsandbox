@@ -14,10 +14,12 @@ Item {
 
         TextField {
             id: textField
+            text: "fds"
+            font.family: "Courier"
             Layout.fillHeight: true
             Layout.columnSpan: 4
             Layout.fillWidth: true
-            placeholderText: qsTr("Text Field")
+            horizontalAlignment: TextInput.AlignRight
         }
 
         Button {
