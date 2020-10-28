@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>DragRect.qml</file>
+        <file>Connection.qml</file>
+    </qresource>
+</RCC>

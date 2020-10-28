@@ -23,3 +23,4 @@ configure_file(${TEST_QML_FILE} ${CMAKE_CURRENT_BINARY_DIR}/tst_${TEST_QML_FILE}
 endforeach()
 target_link_libraries(qmltest1 Qt5::Qml Qt5::Quick Qt5::QuickTest)
 add_subdirectory(./calculator)
+add_subdirectory(./graph)
