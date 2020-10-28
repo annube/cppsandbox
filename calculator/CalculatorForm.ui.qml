@@ -5,6 +5,7 @@ import QtQuick.Controls 1.6
 Item {
     width: 400
     height: 400
+    property alias button16: button16
 
     GridLayout {
         id: gridLayout
