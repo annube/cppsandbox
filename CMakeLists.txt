@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.1.0)
 
 project(cppsandox)
 
+set(CMAKE_CXX_STANDARD 17)
+
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
@@ -24,3 +26,4 @@ endforeach()
 target_link_libraries(qmltest1 Qt5::Qml Qt5::Quick Qt5::QuickTest)
 add_subdirectory(./calculator)
 add_subdirectory(./graph)
+add_subdirectory(./graph_parse)
