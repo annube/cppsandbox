@@ -10,11 +10,11 @@ ShapePath {
     fillColor: "transparent"
     capStyle: ShapePath.RoundCap
 
-    startX: r1.x + 0.5 * r1.width
-    startY: r1.y + 0.5 * r1.height
+    startX: source.x + 0.5 * source.width
+    startY: source.y + 0.5 * source.height
     PathLine{
-    x: r2.x + 0.5 * r2.width
-    y: r2.y + 0.5 * r2.height
+    x: destination.x + 0.5 * destination.width
+    y: destination.y + 0.5 * destination.height
     }
 }
 }
