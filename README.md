@@ -1,5 +1,5 @@
 # cppsandbox
-Collection of examples solving elementary problems not specific to concrete project.
+Collection of examples solving elementary problems not specific to a concrete project.
 
 # Examples
 ## 1
