@@ -6,8 +6,8 @@ Collection of examples solving elementary problems not limited to specific domai
 
 Connect dragable Objects by a Line
 
-## nlmon
+## Nlmon
 C/libnfnetlink based monitoring of network interface state via netlink socket interface.
 
-## nlmon
+## Nlmoncpp
 C++/boost-asio based monitoring of network interface state via netlink socket interface.
