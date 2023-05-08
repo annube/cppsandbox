@@ -11,3 +11,6 @@ C/libnfnetlink based monitoring of network interface state via netlink socket in
 
 ## Nlmoncpp
 C++/boost-asio based monitoring of network interface state via netlink socket interface.
+
+## Qmltest
+Examlpe QML test project. Should demonstrate how one could perform QML tests w/o user interaction.
