@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
 
   while (1)
   {
-    nlif_query(ifHandle);
+    nlif_catch(ifHandle);
      auto ifStateNew = getIfUpState(ifHandle, ifIndex);
      if(ifStateNew != ifState)
      {
