@@ -10,7 +10,10 @@ set(CMAKE_AUTOUIC ON)
 find_package(Qt5 COMPONENTS Qml Quick QuickTest REQUIRED)
 find_package(Boost 1.66 REQUIRED COMPONENTS system)
 
+include_directories(${Boost_INCLUDE_DIRS})
+
 add_subdirectory(./graph)
 add_subdirectory(nlmon)
 add_subdirectory(nlmoncpp)
 add_subdirectory(qmltest)
+add_subdirectory(boost_parser/)
