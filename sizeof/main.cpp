@@ -1,7 +1,7 @@
 #include <cstdio>
 
 #include <boost/type_index.hpp>
-
+#include <vector>
 
 template <typename T>
 void printSize() {
@@ -14,6 +14,14 @@ struct S
   int x;
   char c;
   int z;
+  virtual void fnv() const = 0;
+};
+
+struct T{
+  int x;
+  char c;
+  int z;
+  int fn() const;
 };
 
 int main()
@@ -22,5 +30,15 @@ int main()
   printSize<long long int>();
   printSize<unsigned int>();
   printSize<double>();
+
+  printSize<decltype(std::distance(std::declval<std::vector<int>::const_iterator>(),
+                                   std::declval<std::vector<int>::const_iterator>()))>();
+
+  printSize<std::size_t>();
+
   printSize<S>();
+  printSize<void(S::*)()>();
+
+  printSize<T>();
+  printSize<void(T::*)()>();
 }
