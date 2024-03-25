@@ -19,3 +19,5 @@ add_subdirectory(qmltest)
 add_subdirectory(boost_parser/)
 add_subdirectory(sizeof)
 add_subdirectory(vfnptr/)
+add_subdirectory(tls_server)
+
