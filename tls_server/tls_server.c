@@ -52,25 +52,26 @@ SSL_CTX *create_context()
     return ctx;
 }
 
-void configure_context(SSL_CTX *ctx)
-{
-    /* Set the key and cert */
-    if (SSL_CTX_use_certificate_file(ctx, "cert.pem", SSL_FILETYPE_PEM) <= 0) {
-        ERR_print_errors_fp(stderr);
-        exit(EXIT_FAILURE);
-    }
-
-    if (SSL_CTX_use_PrivateKey_file(ctx, "key.pem", SSL_FILETYPE_PEM) <= 0 ) {
-        ERR_print_errors_fp(stderr);
-        exit(EXIT_FAILURE);
-    }
-}
-
 struct SSL_config
 {
     char server_certificate[1024];
     char server_key[1024];
 };
+
+
+void configure_context(SSL_CTX *ctx, struct SSL_config *sslConfig)
+{
+    /* Set the key and cert */
+    if (SSL_CTX_use_certificate_file(ctx, sslConfig->server_certificate, SSL_FILETYPE_PEM) <= 0) {
+        ERR_print_errors_fp(stderr);
+        exit(EXIT_FAILURE);
+    }
+
+    if (SSL_CTX_use_PrivateKey_file(ctx,  sslConfig->server_key, SSL_FILETYPE_PEM) <= 0 ) {
+        ERR_print_errors_fp(stderr);
+        exit(EXIT_FAILURE);
+    }
+}
 
 int main(int argc, char **argv)
 {
@@ -83,7 +84,9 @@ int main(int argc, char **argv)
 
     struct SSL_config sslConfig;
 
-    strcpy(sslConfig.server_certificate, argv[1]);
+    memset(&sslConfig, '\0', sizeof(sslConfig));
+
+    strcpy(sslConfig.server_key, argv[1]);
     strcpy(sslConfig.server_certificate, argv[2]);
 
     int sock;
@@ -94,7 +97,7 @@ int main(int argc, char **argv)
 
     ctx = create_context();
 
-    configure_context(ctx);
+    configure_context(ctx, &sslConfig);
 
     sock = create_socket(4433);
 
