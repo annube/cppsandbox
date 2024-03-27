@@ -66,8 +66,26 @@ void configure_context(SSL_CTX *ctx)
     }
 }
 
+struct SSL_config
+{
+    char server_certificate[1024];
+    char server_key[1024];
+};
+
 int main(int argc, char **argv)
 {
+
+    if(argc < 3)
+    {
+        fprintf(stderr, "%s <server_cert> <server_key>\n", argv[0]);
+        return -1;
+    }
+
+    struct SSL_config sslConfig;
+
+    strcpy(sslConfig.server_certificate, argv[1]);
+    strcpy(sslConfig.server_certificate, argv[2]);
+
     int sock;
     SSL_CTX *ctx;
 
