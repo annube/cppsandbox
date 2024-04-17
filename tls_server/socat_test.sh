@@ -1,10 +1,12 @@
 #!/bin/bash
 
-./run_tls_server.sh &
+./tls_server ./keys_and_certs/localhost.key ./keys_and_certs/localhost.crt &
 server_pid=$!
+echo "server pid: $server_pid"
 trap "kill $server_pid" SIGTERM SIGINT TERM
 socat openssl:localhost:4433,cafile=./keys_and_certs/ca.crt CREATE:result.log
 
+echo "killing pid $server_pid"
 kill $server_pid
 
 
