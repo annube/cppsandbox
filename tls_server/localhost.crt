@@ -1,0 +1,83 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, ST=Texas, L=Austin, O=My Personal Certificate Authority, OU=Certification Services Division, CN=Test AnyCode Soft
+        Validity
+            Not Before: Mar 27 06:33:13 2024 GMT
+            Not After : Mar 27 06:33:13 2026 GMT
+        Subject: C=US, ST=Texas, L=Austin, O=My Personal Organization, OU=Secure Server, CN=localhost
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:c2:a6:df:a1:ee:c3:b4:b1:05:b0:22:b9:e5:66:
+                    96:a6:5f:75:83:0a:29:87:ba:5d:07:5b:15:97:56:
+                    eb:ed:55:89:8e:6a:80:7b:f4:d5:15:b7:1d:81:05:
+                    6d:e1:cb:7d:58:3c:f1:fb:db:9f:0c:d0:b8:ae:ff:
+                    76:33:55:bf:84:3b:a9:5f:36:2c:10:7b:f5:92:0d:
+                    fd:c1:3e:3d:7d:ed:50:15:eb:fd:a8:df:6a:c4:b1:
+                    e1:07:cb:f1:b5:ce:0f:b8:47:fd:3d:74:cb:7a:8c:
+                    9c:0f:77:cf:12:b6:6b:e2:27:b0:19:f1:f3:ea:e3:
+                    2f:f4:9a:65:27:9e:c9:21:ed:e2:4d:b8:fb:05:f1:
+                    45:a9:06:89:cd:e2:ba:71:22:a3:d0:89:38:ed:f3:
+                    26:96:3e:4f:fe:48:e8:fa:97:c6:8e:aa:e5:60:5b:
+                    a3:74:80:95:ab:c8:e4:83:f0:0f:29:1c:d2:1c:13:
+                    9f:c8:c3:62:6a:96:10:73:64:b0:dd:2d:ca:92:29:
+                    90:7e:e3:1b:c1:5a:59:d5:60:fa:fd:04:b0:64:06:
+                    e7:9c:60:df:c4:59:1a:21:08:9d:2e:2d:5d:6d:57:
+                    5d:39:64:09:2e:73:08:f6:2d:11:ad:e3:b8:82:a9:
+                    09:25:1c:09:db:55:01:08:a2:1f:99:e6:4d:f4:13:
+                    a2:7f
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Subject Alternative Name: 
+                DNS:localhost
+            X509v3 Subject Key Identifier: 
+                79:AA:03:EF:52:12:4A:E1:88:59:F5:DA:98:33:BF:D5:F6:45:45:D6
+            X509v3 Authority Key Identifier: 
+                E0:60:1E:8E:8A:53:45:AC:4E:AD:F7:23:C3:D7:A6:66:0D:91:56:31
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        aa:e3:ed:93:3d:2d:b6:3c:69:93:29:e1:c2:31:4e:63:61:4d:
+        93:0a:10:b0:4f:6e:be:1c:52:8b:c7:bc:b9:21:40:fa:00:b1:
+        12:ef:eb:75:f7:c2:52:98:94:b5:8e:69:f2:d7:00:90:c7:3d:
+        72:79:78:12:bf:3b:8d:73:22:c1:a6:80:80:97:7c:9f:97:7f:
+        1f:88:b0:ca:f0:0d:f3:64:75:0c:a4:a8:0b:8a:e5:3e:ff:ee:
+        48:d0:e7:b1:3d:ad:66:3b:8e:70:62:1a:9f:b8:03:be:01:c9:
+        08:f6:68:03:4c:f9:6a:46:53:7a:f4:5c:a1:81:2a:cd:99:0d:
+        59:c0:f0:f5:2a:6e:20:e4:8b:76:3a:9c:85:3e:c5:91:bc:fe:
+        0d:1f:74:55:a2:a2:39:c1:39:ad:ab:66:f2:6b:cd:53:d5:a9:
+        da:8d:17:d1:85:f3:c0:ec:c0:0e:4f:32:e2:a3:63:d5:9c:1b:
+        5c:bd:5c:a5:37:93:be:d9:2e:0e:d4:fb:4e:70:c7:9a:51:63:
+        c3:ca:7e:68:d3:10:83:d2:a1:de:a5:be:a7:92:ab:64:0a:b6:
+        36:f4:f4:5f:05:37:c1:57:c6:b1:32:58:fd:9b:60:91:50:c9:
+        05:8d:58:8e:aa:21:bd:53:b2:d6:7d:8d:6a:68:b2:eb:d4:46:
+        03:bb:40:4d
+-----BEGIN CERTIFICATE-----
+MIIEEDCCAvigAwIBAgIBATANBgkqhkiG9w0BAQsFADCBoDELMAkGA1UEBhMCVVMx
+DjAMBgNVBAgTBVRleGFzMQ8wDQYDVQQHEwZBdXN0aW4xKjAoBgNVBAoTIU15IFBl
+cnNvbmFsIENlcnRpZmljYXRlIEF1dGhvcml0eTEoMCYGA1UECxMfQ2VydGlmaWNh
+dGlvbiBTZXJ2aWNlcyBEaXZpc2lvbjEaMBgGA1UEAxMRVGVzdCBBbnlDb2RlIFNv
+ZnQwHhcNMjQwMzI3MDYzMzEzWhcNMjYwMzI3MDYzMzEzWjB9MQswCQYDVQQGEwJV
+UzEOMAwGA1UECBMFVGV4YXMxDzANBgNVBAcTBkF1c3RpbjEhMB8GA1UEChMYTXkg
+UGVyc29uYWwgT3JnYW5pemF0aW9uMRYwFAYDVQQLEw1TZWN1cmUgU2VydmVyMRIw
+EAYDVQQDEwlsb2NhbGhvc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQDCpt+h7sO0sQWwIrnlZpamX3WDCimHul0HWxWXVuvtVYmOaoB79NUVtx2BBW3h
+y31YPPH7258M0Liu/3YzVb+EO6lfNiwQe/WSDf3BPj197VAV6/2o32rEseEHy/G1
+zg+4R/09dMt6jJwPd88StmviJ7AZ8fPq4y/0mmUnnskh7eJNuPsF8UWpBonN4rpx
+IqPQiTjt8yaWPk/+SOj6l8aOquVgW6N0gJWryOSD8A8pHNIcE5/Iw2JqlhBzZLDd
+LcqSKZB+4xvBWlnVYPr9BLBkBuecYN/EWRohCJ0uLV1tV105ZAkucwj2LRGt47iC
+qQklHAnbVQEIoh+Z5k30E6J/AgMBAAGjdzB1MB0GA1UdJQQWMBQGCCsGAQUFBwMB
+BggrBgEFBQcDAjAUBgNVHREEDTALgglsb2NhbGhvc3QwHQYDVR0OBBYEFHmqA+9S
+EkrhiFn12pgzv9X2RUXWMB8GA1UdIwQYMBaAFOBgHo6KU0WsTq33I8PXpmYNkVYx
+MA0GCSqGSIb3DQEBCwUAA4IBAQCq4+2TPS22PGmTKeHCMU5jYU2TChCwT26+HFKL
+x7y5IUD6ALES7+t198JSmJS1jmny1wCQxz1yeXgSvzuNcyLBpoCAl3yfl38fiLDK
+8A3zZHUMpKgLiuU+/+5I0OexPa1mO45wYhqfuAO+AckI9mgDTPlqRlN69FyhgSrN
+mQ1ZwPD1Km4g5It2OpyFPsWRvP4NH3RVoqI5wTmtq2bya81T1anajRfRhfPA7MAO
+TzLio2PVnBtcvVylN5O+2S4O1PtOcMeaUWPDyn5o0xCD0qHepb6nkqtkCrY29PRf
+BTfBV8axMlj9m2CRUMkFjViOqiG9U7LWfY1qaLLr1EYDu0BN
+-----END CERTIFICATE-----
