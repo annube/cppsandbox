@@ -27,12 +27,19 @@ ${CMAKE_CURRENT_SOURCE_DIR}/keys_and_certs ${CMAKE_CURRENT_BINARY_DIR}/keys_and_
   keys_and_certs/ca.crt
   )
 
+set(SCRIPT_TARGETS "")
+foreach(script IN ITEMS run_tls_server.sh socat_test.sh)
+    add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${script}
+        COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/${script} ${CMAKE_CURRENT_BINARY_DIR}
+        DEPENDS ${script}
+    )
+    set( SCRIPT_TARGETS ${script_targets} ${CMAKE_CURRENT_BINARY_DIR}/${script})
+endforeach()
+add_custom_target(SCRIPTS DEPENDS ${SCRIPT_TARGETS})
 
-FILE(COPY run_tls_server.sh DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-FILE(COPY socat_test.sh DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_test(NAME SslSocat
-  COMMAND ./socat_test.sh
+  COMMAND ${CMAKE_CURRENT_BINARY_DIR}/socat_test.sh
   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
   )
 
