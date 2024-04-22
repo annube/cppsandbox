@@ -13,7 +13,7 @@ set(KEYS_AND_CERTS
   ${CMAKE_CURRENT_BINARY_DIR}/keys_and_certs/ca.crt
   )
 
-add_custom_target(SSL_FILES
+add_custom_target(SSL_FILES ALL
 DEPENDS
 ${KEYS_AND_CERTS}
 )
@@ -35,7 +35,7 @@ foreach(script IN ITEMS run_tls_server.sh socat_test.sh)
     )
     set( SCRIPT_TARGETS ${script_targets} ${CMAKE_CURRENT_BINARY_DIR}/${script})
 endforeach()
-add_custom_target(SCRIPTS DEPENDS ${SCRIPT_TARGETS})
+add_custom_target(SCRIPTS ALL DEPENDS ${SCRIPT_TARGETS})
 
 
 add_test(NAME SslSocat
