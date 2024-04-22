@@ -7,6 +7,11 @@
 #include <openssl/ssl.h>
 #include <openssl/err.h>
 
+#define max(a,b) \
+({ __typeof__ (a) _a = (a); \
+       __typeof__ (b) _b = (b); \
+     _a > _b ? _a : _b; })
+
 int create_socket(int port)
 {
     int s;
@@ -120,7 +125,10 @@ int main(int argc, char **argv)
         if (SSL_accept(ssl) <= 0) {
             ERR_print_errors_fp(stderr);
         } else {
-            SSL_write(ssl, reply, strlen(reply));
+            printf("SSL Handshake accepted\n");
+            char buf[1024];
+            int numBytesRead = SSL_read(ssl, buf, 1024);
+            SSL_write(ssl, buf, max(strlen(buf),numBytesRead));
         }
 
         SSL_shutdown(ssl);
