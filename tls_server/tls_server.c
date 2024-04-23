@@ -157,21 +157,21 @@ int main(int argc, char **argv)
     parse_ssl_config(argc, argv, &sslConfig);
 
     int sock;
-    ssl_server_context* ssl_server_ctx;
+    ssl_server_context ssl_server_ctx;
 
     /* Ignore broken pipe signals */
     signal(SIGPIPE, SIG_IGN);
 
-    init_context(ssl_server_ctx, &sslConfig);
+    init_context(&ssl_server_ctx, &sslConfig);
 
-    ssl_server_ctx->socketFD = create_socket(4433);
+    ssl_server_ctx.socketFD = create_socket(4433);
 
     /* Handle connections */
     while(1) {
 
         ssl_client_connection client_conn;
 
-        nextClientRequest(ssl_server_ctx, &client_conn);
+        nextClientRequest(&ssl_server_ctx, &client_conn);
 
         if (SSL_do_handshake(client_conn.ssl) <= 0) {
             ERR_print_errors_fp(stderr);
@@ -179,6 +179,7 @@ int main(int argc, char **argv)
             printf("SSL Handshake accepted\n");
             char buf[1024];
             int numBytesRead = SSL_read(client_conn.ssl, buf, 1024);
+            printf("bytes read %d\n", numBytesRead);
             SSL_write(client_conn.ssl, buf, min(strlen(buf),numBytesRead));
         }
 
@@ -187,5 +188,5 @@ int main(int argc, char **argv)
     }
 
     close(sock);
-    SSL_CTX_free(ssl_server_ctx->ssl_ctx);
+    SSL_CTX_free(ssl_server_ctx.ssl_ctx);
 }
